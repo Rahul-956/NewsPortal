@@ -1,0 +1,12 @@
+<<div class= "container-fluid mt-3">
+    <h4>Top Headlines</h4>
+    <marquee>For more Updates Subscribe to our newsletter</marquee>
+    <div class="row mt-3">
+        <div *ngFor="let nd of topHeadlinesData" class="col-lg-3">
+            <img src="nd.urlToImage" width="100%">
+            <h5>{{nd.title}}</h5>
+            <p>{{nd.content}}</p>
+            <a href="{{nd.url}}">Read more</a>
+        </div>
+    </div>
+</div>    
