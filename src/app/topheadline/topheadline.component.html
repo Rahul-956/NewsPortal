@@ -1,14 +1,34 @@
-<<div class= "container-fluid mt-3">
-    <h4><br>Top Headlines</h4>
+<<div class="container-fluid mt-3">
+    <h4><br>Top Headlines-General</h4>
     <marquee>For more Updates Subscribe to our newsletter</marquee>
-    <div class="row mt-3">
-        <div *ngFor="let nd of topHeadlinesData" class="col-lg-3">
-            <div class="box">
-            <img src="nd.urlToImage" width="100%">
-            <h5 class ="mt-3 mb-3">{{nd.title}}</h5>
-            <!-- <p>{{nd.content}}</p> -->
-            <a class="btn btn-dark btn-sm"  target="_black" href="{{nd.url}}">Read more</a>
+    <div id="carouselExampleCaptions" *ngFor="let nd of techNewsData" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+                <img src="{{nd.url}}" class="d-block w-100 " alt="Error">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Top Headlines</h2>
+                    <p> {{nd.title}}</p>
+                </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    </div>
+    <<div class="container-fluid mt-3">
+        <h4><br>Top Headlines-Tech</h4>
+        <div class="row mt-3">
+            <div *ngFor="let nd of techNewsData" class="col-lg-3">
+                <div class="box">
+                    <img src="nd.urlToImage" width="100%">
+                    <h5 class="mt-3 mb-3">{{nd.title}}</h5>
+                    <!-- <p>{{nd.content}}</p> -->
+                    <a class="btn btn-dark btn-sm" target="_black" href="{{nd.url}}">Read more</a>
+                </div>
             </div>
         </div>
-    </div>
-</div>    
+        </div>

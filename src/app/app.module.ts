@@ -7,13 +7,12 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {TcnewsapiService} from './service/tcnewsapi.service'
 import { TopheadlineComponent } from './topheadline/topheadline.component';
-import { TechComponent } from './tech/tech.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopheadlineComponent,
-    TechComponent,
+    TopheadlineComponent
 
   ],
   imports: [
