@@ -9,11 +9,19 @@ export class TcnewsapiService {
 
   constructor(private _http:HttpClient) { }
    // top Headline API Url
-   topHeadlinesNews='https://newsapi.org/v2/top-headlines?country=us&apiKey=60db0df23e01425b997a00de1bc6c2a0';
+   topHeadlinesNews='https://newsapi.org/v2/top-headlines?country=in&apiKey=60db0df23e01425b997a00de1bc6c2a0';
+   //tech news api url
+   techNews='https://newsapi.org/v2/top-headlines?country=in&categoty=technology&apiKey=60db0df23e01425b997a00de1bc6c2a0';
 
    tcheadlines():Observable<any>{
      return this._http.get(this.topHeadlinesNews);
+     
    }
+
+   tcTechNews():Observable<any>{
+    return this._http.get(this.techNews);
+    
+  }
 
   
 }
