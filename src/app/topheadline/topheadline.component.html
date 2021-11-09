@@ -1,13 +1,22 @@
-<<div class="container-fluid mt-3">
+
+<div class="container-fluid mt-3">
+    <div class='row'>
+        <div class='col-md-2'>Filter by:</div>
+        <div class='col-md-4'>
+            <input type='text' 
+            [(ngModel)]='newsFilter'/>
+        </div>
+    </div>
     <h4><br>Top Headlines-General</h4>
     <marquee>For more Updates Subscribe to our newsletter</marquee>
-    <div id="carouselExampleCaptions" *ngFor="let nd of techNewsData" class="carousel slide carousel-fade" data-ride="carousel">
+    <div id="carouselExampleCaptions" *ngFor="let nd of techNewsData" class="carousel slide carousel-fade"
+        data-ride="carousel">
         <div class="carousel-inner">
-                <img src="{{nd.url}}" class="d-block w-100 " alt="Error">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2>Top Headlines</h2>
-                    <p> {{nd.title}}</p>
-                </div>
+            <img src="{{nd.url}}" class="d-block w-100 " alt="Error">
+            <div class="carousel-caption d-none d-md-block">
+                <h2><br>Top Headlines</h2>
+                <p> {{nd.title}}</p>
+            </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -18,8 +27,8 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    </div>
-    <<div class="container-fluid mt-3">
+    
+    <div class="container-fluid mt-3">
         <h4><br>Top Headlines-Tech</h4>
         <div class="row mt-3">
             <div *ngFor="let nd of techNewsData" class="col-lg-3">
@@ -31,4 +40,5 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
+</div>
