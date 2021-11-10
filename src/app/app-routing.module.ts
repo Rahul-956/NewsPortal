@@ -8,14 +8,15 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { BusinessnewsComponent } from './topheadline/newspanel/businessnews/businessnews.component';
+import { EntertainmentComponent } from './topheadline/newspanel/entertainment/entertainment.component';
 
 const routes: Routes = [
+ 
   {path:'', component:TopheadlineComponent},// top headlines component
-  // {path:'login', component:LoginComponent}// login component
   // {path:'contact', component:ContactComponent}
-  // {path:'', redirectTo:'top-news' , pathMatch:'full'},
   {path:'technews', component:TechnewsComponent},
   {path:'businessnews', component:BusinessnewsComponent},
+  {path:'entertainmentnews', component:EntertainmentComponent},
   {path:'about-us', component:AboutusComponent},
   {path:'register', component:RegistrationComponent},
   {path:'login',component:LoginComponent }

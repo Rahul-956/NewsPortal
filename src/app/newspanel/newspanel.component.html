@@ -1,13 +1,14 @@
+<nav class="topnav-centered d" aria-label="...">
+  <ul class="pagination justify-content-center">
 
-<nav class="topnav-centered" aria-label="...">
-    <ul class="pagination">
-    
-      <li class="page-item "><a class="page-link" [routerLink]="['technews']">Technical News</a></li>
-      <li class="page-item">
-        <a class="page-link" [routerLink]="['businessnews']">Business News</a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#!">Bollywood</a></li>
-      
-    </ul>
+    <li class="page-item "><a class="page-link" routerLinkActive="active" [routerLink]="['technews']">Technical News</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" routerLinkActive="active" [routerLink]="['businessnews']">Business News</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" routerLinkActive="active" [routerLink]="['entertainmentnews']">Entertainment</a>
+    </li>
+
+  </ul>
 </nav>
-
