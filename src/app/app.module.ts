@@ -9,14 +9,10 @@ import { TopheadlineComponent } from './topheadline/topheadline.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContactComponent } from './contact/contact.component';
 
-// import { LoginComponent } from './login/login.component';
-
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    // LoginComponent,
     TopheadlineComponent,
     ContactComponent
   ],
