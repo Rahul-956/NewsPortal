@@ -13,6 +13,9 @@ export class newsapiService {
    //tech news api url
    tctechNews='https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=60db0df23e01425b997a00de1bc6c2a0';
 
+   //business news api
+   tcbusinessNews='https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=60db0df23e01425b997a00de1bc6c2a0';
+
    tcheadlines():Observable<any>{
      return this._http.get(this.tctopHeadlinesNews);
      
@@ -20,6 +23,10 @@ export class newsapiService {
 
    tcTechNews():Observable<any>{
     return this._http.get(this.tctechNews);
+   }
+   
+   tcbusinesshNews():Observable<any>{
+      return this._http.get(this.tcbusinessNews);
     
   }
 

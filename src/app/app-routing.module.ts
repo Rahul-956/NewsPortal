@@ -7,6 +7,7 @@ import { TechnewsComponent } from './topheadline/newspanel/technews/technews.com
 import { AboutusComponent } from './aboutus/aboutus.component';
 // import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
+import { BusinessnewsComponent } from './topheadline/newspanel/businessnews/businessnews.component';
 
 const routes: Routes = [
   {path:'', component:TopheadlineComponent},// top headlines component
@@ -14,6 +15,7 @@ const routes: Routes = [
   // {path:'contact', component:ContactComponent}
   // {path:'', redirectTo:'top-news' , pathMatch:'full'},
   {path:'technews', component:TechnewsComponent},
+  {path:'businessnews', component:BusinessnewsComponent},
   {path:'about-us', component:AboutusComponent},
   // {path:'sign-up', component:RegistrationComponent},
   {path:'login',component:LoginComponent }

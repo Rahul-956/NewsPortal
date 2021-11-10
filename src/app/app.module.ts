@@ -10,6 +10,9 @@ import { TechnewsComponent } from './topheadline/newspanel/technews/technews.com
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { LoginComponent } from './login/login.component';
 import { NewspanelComponent } from './newspanel/newspanel.component';
+import { BusinessnewsComponent } from './topheadline/newspanel/businessnews/businessnews.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -20,13 +23,16 @@ import { NewspanelComponent } from './newspanel/newspanel.component';
     AboutusComponent,
     // RegistrationComponent,
     LoginComponent,
-    NewspanelComponent
+    NewspanelComponent,
+    BusinessnewsComponent
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [newsapiService],
   bootstrap: [AppComponent]
