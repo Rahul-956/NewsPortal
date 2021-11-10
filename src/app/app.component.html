@@ -8,10 +8,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link">Home </a>
+                <a class="nav-link" > Home </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">About</a>
+                <a class="nav-link" [routerLink]="['about-us']">About</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['contact']">Contact Us</a>
@@ -26,13 +26,18 @@
         </ul>
     </div>
     <div class="mx-2">
-        <button class="btn btn-primary" >Login</button>
-        <button class="btn btn-primary">SignUp</button>
+        <button class="btn btn-primary" [routerLink]="['login']" *ngIf="isShown" >Login</button>
+        <button class="btn btn-primary" [routerLink]="['sign-up']">SignUp</button>
     </div>
 </nav>
 
 
 <router-outlet></router-outlet>
+
+<app-newspanel></app-newspanel>
+
+
+
 <footer class="bd-footer py-5 mt-5 bg-light">
     <div class="container py-5">
         <div class="row">
