@@ -20,4 +20,8 @@ export class TechnewsComponent implements OnInit {
     });
   }
 
+  ngOnDestroy() {
+    this.techNewsData().unsubscribe()
+  }
+
 }

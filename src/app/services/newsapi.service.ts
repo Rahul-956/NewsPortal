@@ -15,6 +15,8 @@ export class newsapiService {
 
    //business news api
    tcbusinessNews='https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=60db0df23e01425b997a00de1bc6c2a0';
+   //entertainment news api
+   tcEntertainmentNews='https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=60db0df23e01425b997a00de1bc6c2a0';
 
    tcheadlines():Observable<any>{
      return this._http.get(this.tctopHeadlinesNews);
@@ -28,7 +30,11 @@ export class newsapiService {
    tcbusinesshNews():Observable<any>{
       return this._http.get(this.tcbusinessNews);
     
-  }
-
   
+    }
+   
+
+    tcentertainmentNews():Observable<any>{
+      return this._http.get(this.tcEntertainmentNews);
+    }
 }

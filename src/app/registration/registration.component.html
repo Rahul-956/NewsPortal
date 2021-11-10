@@ -11,6 +11,8 @@
                         accept="Image/*"><br>
                 </div>
 
+                
+                <!-- Input First name -->
                 <div class="form-group">
                     <label for="firstname">First Name</label>
                     <input class="form-control" [(ngModel)]="user.firstname" #firstname="ngModel" required minlength="3"
@@ -20,11 +22,11 @@
                         <p *ngIf="firstname.errors?.['required']" class="alert alert-danger">First name is required</p>
                         <p *ngIf="firstname.errors?.['pattern']" class="alert alert-danger">First name should be in
                             [A-z] and [a-z]</p>
-                        <p *ngIf="firstname.errors?.['minlength']" class="alert alert-danger">Mininmum length should be
-                            3 characters</p>
+                        <p *ngIf="firstname.errors?.['minlength']" class="alert alert-danger">Mininmum length should be 3 characters</p>
                     </div>
                 </div>
 
+                <!-- Input Second name -->
                 <div class="form-group">
                     <label for="Lastname">Lastname</label>
                     <input class="form-control" [(ngModel)]="user.lastname" #lastname="ngModel" required minlength="3"
@@ -38,33 +40,57 @@
                     </div>
                 </div>
 
+                <!-- Input Email address -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control" [(ngModel)]="user.email" type="text" name="email"><br>
+                </div>
+
+                <!-- Input phone Number -->
+                <div class="form-group">
+                    <label for="phone">Phone number</label>
+                    <input class="form-control" [(ngModel)]="user.phone" pattern="[0-9]" #phone="ngModel" minilength="10" maxlength="10" type="text" name="phone"><br>
+
+                    <div>
+                        <p *ngIf="phone.errors?.['minlength']" class="alert alert-danger"> Phone number should have 10 digits</p>
+                    </div>
+                </div>
+                
+
+
+
+                  <!-- Input Username -->      
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input class="form-control" [(ngModel)]="user.username" #username="ngModel" required type="text"
                         name="username">
+                        <small id="phoneHelp" class="form-text text-muted"> If you are using landline number , Add Std Code with it.</small>
 
                     <div class="form-control-feedback" *ngIf="username.errors && (username.dirty || username.touched)">
                         <p *ngIf="username.errors?.['required']" class="alert alert-danger">Username is required</p>
                     </div>
                 </div>
+                <br>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input class="form-control" type="text" name="email"><br>
-                </div>
 
+                
+
+                <!-- Input Password -->
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input class="form-control" required [(ngModel)]="user.password" #password="ngModel" type="password" name="password"><br>
+                    <input class="form-control" required [(ngModel)]="user.password" #password="ngModel"  Pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g" required minlength="6" maxlength="12" type="password" name="password">
+                    <small id="passHelp" class="form-text text-muted">Max length of password should be 12 character.</small>
 
                     <div class="form-control-feedback" *ngIf="password.errors && (password.dirty || password.touched)">
                         <p *ngIf="password.errors?.['required']">Password is required</p>
-                        <p *ngIf="password.errors?.['minlength']">Password must be at least 8 characters long</p>
+                        <p *ngIf="password.errors?.['minlength']">Password must be at least 6 characters long</p>
+                        <p *ngIf="password.errors?.['pattern']">At least 1 Uppercase
+                            At least 1 Lowercase,1 Number,1 Symbol and it should not start with special charcter</p>
                     </div>
 
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="retype_password">Retype Password</label>
                     <input class="form-control" required type="password" name="retype_password"><br>
                 </div>
@@ -72,8 +98,11 @@
                 <div class="form-group">
                     <label for="mobile">Mobile</label>
                     <input class="form-control" required type="text" name="mobile" id="textPhoneNo"><br>
-                </div>
+                </div> -->
 
+                <!-- Terms and Condition -->
+
+                <br>
                 <label>
                     <a href="#service">Terms & Conditions</a>
                 </label>

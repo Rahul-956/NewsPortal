@@ -12,7 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { NewspanelComponent } from './newspanel/newspanel.component';
 import { BusinessnewsComponent } from './topheadline/newspanel/businessnews/businessnews.component';
 import { FormsModule } from '@angular/forms';
-import { RegistrationComponent } from './registration/registration.component';
+import {RegistrationComponent} from './registration/registration.component'
+import { EntertainmentComponent } from './topheadline/newspanel/entertainment/entertainment.component';
 
 
 
@@ -22,11 +23,11 @@ import { RegistrationComponent } from './registration/registration.component';
     TopheadlineComponent,
     TechnewsComponent,
     AboutusComponent,
-    // RegistrationComponent,
     LoginComponent,
     NewspanelComponent,
+    RegistrationComponent,
     BusinessnewsComponent,
-    RegistrationComponent
+    EntertainmentComponent
    
   ],
   imports: [
