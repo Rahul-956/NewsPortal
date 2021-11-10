@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TcnewsapiService } from '../service/tcnewsapi.service';
+import { newsapiService } from '../services/newsapi.service';
 
 @Component({
   selector: 'app-topheadline',
@@ -8,14 +8,14 @@ import { TcnewsapiService } from '../service/tcnewsapi.service';
 })
 export class TopheadlineComponent implements OnInit {
 
-  constructor(private api:TcnewsapiService) { }
+  constructor(private api:newsapiService) { }
   
   topHeadlinesData:any=[];
   
   techNewsData:any=[];
 
   ngOnInit(): void {
-    this.api.tcheadlines().subscribe((result)=>
+    this.api.tcheadlines().subscribe((result): void=>
     {console.log(result.articles);
       this.topHeadlinesData= result.articles;
     });
@@ -24,6 +24,6 @@ export class TopheadlineComponent implements OnInit {
     {console.log(result.articles);
       this.techNewsData= result.articles;
     });
-
-}
+  }
+    
 }
