@@ -1,0 +1,39 @@
+<div class="modal-dialog" role="document">
+<br><br>
+<div class="modal-content">
+    <div class="modal-header">
+        <h1>Registration</h1>
+    </div>
+    <div class="modal-body">
+        <form method="post" target="#" onsubmit="return validate()">
+        <input class="file-upload-input" type="file" onchange="readURL(this)" accept="Image/*"><br>
+        FirstName<br>
+        <input required minlength="3" maxlength="25" pattern="[A-Za-z]" type="text" name="firstname"><br>
+        LastName<br>
+        <input required minlength="3" maxlength="25" pattern="[A-Za-z]" type="text" name="lastname"><br>
+        UserName<br>
+        <input required type="text" name="name"><br>
+        Email<br>
+        <input type="text" name="email"><br>
+        Create a password<br>
+        <input required type="password" name="password"><br>
+        Retype password<br>
+        <input required type="password" name="retype_password"><br>
+        Mobile No.<br>
+        <input required type="text" name="mobile" id="textPhoneNo"><br>
+
+        <label>
+            <a href="#service">Terms & Conditions</a>
+        </label>
+    </form>
+
+        <div class="button">
+            <input type="submit" class="btn btn-primary" value="Sign Up">
+        </div>
+    </div>    
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" [routerLink]="['']">Close</button>
+    </div>
+    
+</div>
+</div>

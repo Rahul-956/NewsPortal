@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TopheadlineComponent } from './topheadline/topheadline.component';
 import { TechnewsComponent } from './topheadline/newspanel/technews/technews.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-// import { RegistrationComponent } from './registration/registration.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { BusinessnewsComponent } from './topheadline/newspanel/businessnews/businessnews.component';
 
@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:'technews', component:TechnewsComponent},
   {path:'businessnews', component:BusinessnewsComponent},
   {path:'about-us', component:AboutusComponent},
-  // {path:'sign-up', component:RegistrationComponent},
+  {path:'register', component:RegistrationComponent},
   {path:'login',component:LoginComponent }
 ];
 
