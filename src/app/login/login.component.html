@@ -5,12 +5,15 @@
         <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Login to LTI News</h5>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" >
             <form>
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" required minlength="4" maxlength="35" >
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your data with anyone else.</small>
+                    <input type="text" class="form-control" id="username" [(ngModel)]="user.username" #username="ngModel" required minlength="4" maxlength="35" >
+
+                    <div class="form-control-feedback" *ngIf="username.errors && (username.dirty || username.touched)">
+                    <p *ngIf="username.errors?.['required']" class="alert alert-danger">Username is required</p>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="InputPassword" >Password</label>

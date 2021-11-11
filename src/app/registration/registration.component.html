@@ -49,12 +49,13 @@
                 <!-- Input phone Number -->
                 <div class="form-group">
                     <label for="phone">Phone number</label>
-                    <input class="form-control" [(ngModel)]="user.phone" pattern="[0-9]" #phone="ngModel" minilength="10" maxlength="10" type="text" name="phone"><br>
-
+                    <input class="form-control" [(ngModel)]="user.phone" pattern="[0-9]" #phone="ngModel" minilength="10" maxlength="10" type="text" name="phone">
+                    <small id="phoneHelp" class="form-text text-muted"> If you are using landline number , Add Std Code with it.</small>
                     <div>
                         <p *ngIf="phone.errors?.['minlength']" class="alert alert-danger"> Phone number should have 10 digits</p>
                     </div>
                 </div>
+                <br>
                 
 
 
@@ -64,7 +65,6 @@
                     <label for="username">Username</label>
                     <input class="form-control" [(ngModel)]="user.username" #username="ngModel" required type="text"
                         name="username">
-                        <small id="phoneHelp" class="form-text text-muted"> If you are using landline number , Add Std Code with it.</small>
 
                     <div class="form-control-feedback" *ngIf="username.errors && (username.dirty || username.touched)">
                         <p *ngIf="username.errors?.['required']" class="alert alert-danger">Username is required</p>
@@ -114,7 +114,7 @@
             </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" [routerLink]="['']">Close</button>
         </div>
 
     </div>

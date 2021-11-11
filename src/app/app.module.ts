@@ -14,6 +14,8 @@ import { BusinessnewsComponent } from './topheadline/newspanel/businessnews/busi
 import { FormsModule } from '@angular/forms';
 import {RegistrationComponent} from './registration/registration.component'
 import { EntertainmentComponent } from './topheadline/newspanel/entertainment/entertainment.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -27,7 +29,9 @@ import { EntertainmentComponent } from './topheadline/newspanel/entertainment/en
     NewspanelComponent,
     RegistrationComponent,
     BusinessnewsComponent,
-    EntertainmentComponent
+    EntertainmentComponent,
+    HeaderComponent,
+    FooterComponent
    
   ],
   imports: [
