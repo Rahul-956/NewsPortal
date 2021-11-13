@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,18 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  user= {
+  loginUser= {
     username:'',
     password:'',
   }
-
-  constructor() { }
+  
+  @Input() isLogin=false;
+  constructor(private login: LoginService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
   
-  onSubmit() {
-    console.log(this.user);
-    //api request store value db
+  formSubmit() {
   }
 }

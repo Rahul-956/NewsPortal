@@ -1,8 +1,6 @@
 <div class="container-fluid mt-3">
-    <br><br><br><br><br><br>
-    <app-newspanel></app-newspanel>
-    <marquee>For more Updates Subscribe to our newsletter</marquee>
-    <div class="container-fluid mt-3"> 
+
+    <!-- <div class="container-fluid mt-3"> 
         <h4><br><br>Top Headlines-World</h4>
         <div class="row mt-3">
             <div *ngFor="let nd of topHeadlinesData , let i=index" class="col-lg-3">
@@ -10,15 +8,44 @@
                     <img src="{{nd.urlToImage}}" width="100%">
                     <h5 class="mt-3 mb-3">{{nd.title}}</h5>
 
-                    <a class="btn btn-dark btn-sm" target="_black" href="{{nd.url}}">Read more</a>
+                    <a class="btn btn-dark btn-sm" target="_blank" href="{{nd.url}}">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div id="TopheadlineCarousel">
+        <ngb-carousel >
+            <ng-template *ngFor="let nd of topHeadlinesData , let i=index" ngbSlide>
+                <div *ngIf="i<8">
+                <div class="picsum-img-wrapper">
+                    <img src="{{nd.urlToImage}}" width= "100%"  object-fit="fill" height=" 700px"  alt=" first slide">
+                </div>
+                <div  class="carousel-caption">
+                    <h3>{{nd.title}}</h3>
+                    <a class="btn btn-dark btn-sm" target="_blank" href="{{nd.url}}">Read more</a>
+                </div>
+            </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+        <app-newspanel></app-newspanel>
+    <marquee>For more Updates Subscribe to our newsletter</marquee>
+
+    <div class="container-fluid mt-3"> 
+        <h4>Top Headlines-World</h4>
+        <div class="row mt-3">
+            <div *ngFor="let nd of topHeadlinesData , let i=index " class="col-lg-3">
+                <div *ngIf="i>=8" class="box">
+                    <img src="{{nd.urlToImage}}" width="100%">
+                    <h5 class="mt-3 mb-3">{{nd.title}}</h5>
+
+                    <a class="btn btn-dark btn-sm" target="_blank" href="{{nd.url}}">Read more</a>
                 </div>
             </div>
         </div>
     </div>
 
-  
-      
-        
-    
-</div>
 
+
+
+</div>

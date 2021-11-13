@@ -17,9 +17,7 @@ export class TopheadlineComponent implements OnInit {
     this.api.tcheadlines().subscribe((result: { articles: any; }): void=>
     {console.log(result.articles);
       this.topHeadlinesData= result.articles;
-    });
-
-   
+    });  
   }
 
     
