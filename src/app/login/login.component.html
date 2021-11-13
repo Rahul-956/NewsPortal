@@ -7,9 +7,9 @@
         </div>
         <div class="modal-body" >
             <form>
-                <div class="form-group">
+                <div  ovalidate class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" [(ngModel)]="user.username" #username="ngModel" required minlength="4" maxlength="35" >
+                    <input type="text" class="form-control" id="username" [(ngModel)]="loginUser.username" #username="ngModel" required minlength="4" maxlength="35" >
 
                     <div class="form-control-feedback" *ngIf="username.errors && (username.dirty || username.touched)">
                     <p *ngIf="username.errors?.['required']" class="alert alert-danger">Username is required</p>
@@ -17,12 +17,12 @@
                 </div>
                 <div class="form-group">
                     <label for="InputPassword" >Password</label>
-                    <input type="password" class="form-control" id="InputPassword" required minlength="6" maxlength="12" >
+                    <input type="password" [(ngModel)]="loginUser.password" #password="ngModel" class="form-control" id="InputPassword" required minlength="6" maxlength="12" >
                 </div>
 
                 <input type="checkbox" id="remember" name="remember"> Remember me!
                 <br>
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="submit" class="btn btn-primary" onclick="formSubmit()">Login</button>
             </form>
         </div>
         <div class="modal-footer">
